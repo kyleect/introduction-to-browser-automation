@@ -387,6 +387,7 @@ Chrome needs to be installed for the chrome webdriver to connect and hte tests t
 2. Click the `Clone or download` button
 3. Click `Use HTTPS` if present
 4. Copy the URL it provides
+5. In the terminal, enter: 'git clone' then paste the url, e.g. 'git clone https://github.com/testingrequired/exampletest.app-tests.git'
 
 ### OR Download Project
 
