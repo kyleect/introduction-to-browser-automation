@@ -16,6 +16,10 @@
 - Page Objects
 - Questions
 
+## Audience
+
+The target audience for this are testers. It progressively gets more technical but hopefully the concepts are still clear.
+
 ## Introduction
 
 - Software and Quality Engineer at Source Allies
