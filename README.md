@@ -225,7 +225,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors
 </div>
 ```
 
-Example: `#idName`
+Example: `#bike`
 
 - https://testingrequired.github.io/selector-display/?share=example-css-selector-id
 
@@ -357,6 +357,14 @@ Example: `#one + #two`
 
 ## Setup
 
+### Terminal
+
+The terminal is needed for some installation and running the tests. Anytime you see a command prefixed with `$` it means to run this command in your terminal.
+
+Example:
+
+`$ npm run test`
+
 ### Installation
 
 #### Node
@@ -379,25 +387,62 @@ You can use any editor you like but I would recommend Visual Studio Code because
 
 #### Chrome
 
-Chrome needs to be installed for the chrome webdriver to connect and hte tests to run.
+Chrome needs to be installed for the chrome webdriver to connect and the tests to run.
 
-### Clone Project
+##### Version
 
-1. Go to https://github.com/testingrequired/exampletest.app-tests
-2. Click the `Clone or download` button
-3. Click `Use HTTPS` if present
-4. Copy the URL it provides
+The `chromedriver` version in `package.json` must align with the version of Chrome you have.
 
-### OR Download Project
+#### Aligning With Chrome
 
-1. Download a zip file of the project from: https://github.com/testingrequired/exampletest.app-tests/releases/tag/workshop
-2. Unzip the contents
+You have two options when matching your Chrome and chromedriver version.
+
+##### Update Chrome
+
+Update Chrome to latest and use latest chromedriver is the easiest method. Unfortunately this isn't always possible such as enterprise environments.
+
+##### Install correct chromedriver version
+
+Another option is to install the correct chromedriver version for your Chrome.
+
+1. Open Chrome
+2. Click on the `...` menu
+3. Click on Help > About Chrome
+4. Locate Chrome major version
+   - Example: `78.0.3904.97`
+   - Major Version: `78`
+5. Find highest `chromedriver` version that matches your Chrome major version
+   - https://www.npmjs.com/package/chromedriver
+   - Example: Chrome `76` chromedriver `76.0.1`
+6. `$ npm install chromedriver@76.0.1` replacing with your chromedriver version
+
+### Obtain Project
+
+You'll need to obtain the test project to be able to run the test suite.
+
+#### Using git
+
+Using git is recommended as you'll be able to pull down the latest versions.
+
+1. Open terminal
+2. `$ cd ...` where `...` is the where you want the project to download to
+3. `$ git clone https://github.com/testingrequired/exampletest.app-tests.git`
+4. `$ cd exampletest.app-tests`
+
+#### Download zip
+
+Another option is to download the project as a zip file.
+
+1. Click on the latest release of the project: https://github.com/testingrequired/exampletest.app-tests/releases
+2. Click `Source code (zip)` and download the zip file
+3. Unzip the project folder where ever you want it to live
 
 ### Run Tests
 
-1. Open up terminal to project folder
-2. Run `npm install`
-3. Run `npm run test`
+1. `$ cd path/to/the/project`
+   Example: `C:\Users\name\exampletest.app-tests` or `~/exampletest.app-tests`
+2. `$ npm install`
+3. `$ npm run test`
 
 ## Webdriver
 
@@ -499,4 +544,8 @@ Atomic Actions:
 
 Composed Actions:
 
-- Login to the login form
+- Login in as user
+
+### Advanced Design Patterns
+
+This [blog post](https://www.testingrequired.com/blog/modern-page-objects) goes in to more advanced page object design patterns: root element, applying page object to element query results, proxying method calls to the root element.
