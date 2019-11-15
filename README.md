@@ -548,4 +548,4 @@ Composed Actions:
 
 ### Advanced Design Patterns
 
-This [blog post](https://www.testingrequired.com/blog/modern-page-objects) goes in to more advanced page object design patterns: root element, applying page object to element query results, proxying method calls to the root element.
+This [blog post](https://www.testingrequired.com/blog/modern-page-objects) goes in to more advanced page object design patterns: root element, applying page object to element query results, proxying method calls to the root element. This pattern allows you to compose page objects together, override element behaviors, automatically scope element queries and more.
